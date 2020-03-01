@@ -35,7 +35,7 @@ const ChatFooter = props => {
                   <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
                 }
                 placeholder={"Enter message here"}
-                autosize={{ minRows: 1, maxRows: 4 }}
+                autoSize={{ minRows: 1, maxRows: 4 }}
                 onKeyPress={event => {
                   const code = event.which || event.keyCode;
                   if (code === 13 && !event.shiftKey) {

@@ -49,7 +49,7 @@ class LoginPage extends Component {
                   rules: [
                     {
                       required: true,
-                      message: "Please enter your firstname"
+                      message: "Please enter your first name"
                     }
                   ]
                 })(
@@ -74,7 +74,7 @@ class LoginPage extends Component {
                   rules: [
                     {
                       required: true,
-                      message: "Please enter your lastname"
+                      message: "Please enter your last name"
                     }
                   ]
                 })(
@@ -91,7 +91,7 @@ class LoginPage extends Component {
                 required={false}
                 label={
                   <span>
-                    <Icon type="user" /> EMAIL
+                    <Icon type="mail" /> EMAIL
                 </span>
                 }
               >
@@ -107,7 +107,7 @@ class LoginPage extends Component {
                   <Input
                     size="large"
                     prefix={
-                      <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
+                      <Icon type="mail" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     placeholder="Email"
                   />

@@ -19,7 +19,7 @@ class ChatMessages extends React.Component {
         chatList
       },
     } = this.props;
-    const { first_name, last_name } = selectedChatRoom;
+    const { first_name, last_name, user_id } = selectedChatRoom;
     return (
       <List
         loading={isChatFetching}

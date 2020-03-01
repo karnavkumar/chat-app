@@ -28,6 +28,8 @@ class LoginStore {
             // this.allStore.users.userId = res.user.user_id;
             // this.allStore.users.getChatsAndUserList()
             history.push("/login");
+          } else {
+            message.error(res.message || "Please try again !", 3)
           }
           this.isBtnLoading = false;
         } catch (error) {
@@ -55,6 +57,8 @@ class LoginStore {
             localStorage.setItem("user_token", res.data.user_token)
             this.allStore.users.getChatsAndUserList()
             history.push("/dashboard");
+          } else {
+            message.error(res.message || "Please try again !", 3)
           }
           this.isBtnLoading = false;
         } catch (error) {

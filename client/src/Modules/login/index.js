@@ -38,7 +38,7 @@ class LoginPage extends Component {
                 required={false}
                 label={
                   <span>
-                    <Icon type="user" /> EMAIL
+                    <Icon type="mail" /> EMAIL
                 </span>
                 }
               >
@@ -53,7 +53,7 @@ class LoginPage extends Component {
                   <Input
                     size="large"
                     prefix={
-                      <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
+                      <Icon type="mail" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     placeholder="Email"
                   />

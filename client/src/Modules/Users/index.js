@@ -12,20 +12,18 @@ class UsersComponent extends React.Component {
   render() {
     const {
       users: {
-        addNewMessage,
         userListFetching,
         chatUsers,
         onChangeUser,
         viewInput,
         selectedChatRoom,
-        handleAddChatUser,
         handleChangeUserId,
         reload,
-        // onChangeUserName,
         user
       },
       login: { onLogout }
     } = this.props;
+    const { user_id } = user;
     return <Spin spinning={reload}>
       {!reload && <div style={{
         padding: "0px 150px"
@@ -60,7 +58,7 @@ class UsersComponent extends React.Component {
                 size="small"
                 bordered
                 loading={userListFetching}
-                dataSource={chatUsers}
+                dataSource={chatUsers.filter(chatItem => chatItem.user_id !== user_id)}
                 renderItem={item => <List.Item
                   onClick={() => onChangeUser(item)}
                 ><div> {item.first_name} {item.last_name} </div></List.Item>}
